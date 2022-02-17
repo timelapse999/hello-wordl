@@ -93,6 +93,8 @@ function About() {
       />
       <p>Siin&auml;h&auml;n se!</p>
 	  
+	  <p>Jos Kieluri ei tunnista sanaa, voit poistaa kirjaimet askelpalauttimella (⌫) ja sitten jatkaa.</p>
+	  
 	  <p>
 	  Sinulla on kolme vaihtoehtoa pelata. Sana tulee joukosta, jossa ovat:
 	  </p>
@@ -104,6 +106,10 @@ function About() {
 
       <li>Kaikki viiden kirjaimen perus- ja taivutusmuodot, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (8168 sanaa).</li>
 	  </ol>
+	  
+	  <p>Valitse 3-, 4- tai 5-kirjaiminen versio yl&auml;palkista.</p>
+	  
+	  <p>Sanoissa ei ole liitepartikkeleita kuten<br /> -han/-h&auml;n, -kaan/-k&auml;&auml;n, -kin, -pa/-p&auml;.</p>
       
 	  <p>
 		<strong>Kielurin ovat tehneet:</strong><br />
@@ -112,7 +118,7 @@ function About() {
 	  <p>Kielurissa k&auml;ytetty koodi on muokattu avoimen l&auml;hdekoodin pohjalta.<br />Alkuper&auml;inen koodi l&ouml;ytyy t&auml;&auml;lt&auml;:<br />
 	  <a href="https://github.com/lynn/hello-wordl" target="_blank">https://github.com/lynn/hello-wordl</a></p>
 	  <p><strong>K&auml;ytetyt aineistot:</strong><br />
-	  <a href="https://kaino.kotus.fi/sanat/nykysuomi/" target="_blank">Kielitoimiston sanakirja</a>, omat generointiohjelmat</p>
+	  <a href="https://kaino.kotus.fi/sanat/nykysuomi/" target="_blank">Kielitoimiston sanalista</a>, omat generointiohjelmat</p>
 	  <p>
         Ilmoita ongelmista{" "}
         <a href="https://github.com/timelapse999/hello-wordl" target="_blank">t&auml;&auml;ll&auml;</a>.
