@@ -120,8 +120,12 @@ function About() {
 	  <p><strong>K&auml;ytetyt aineistot:</strong><br />
 	  <a href="https://kaino.kotus.fi/sanat/nykysuomi/" target="_blank">Kotimaisten kielten keskuksen nykysuomen sanalista</a>, omat generointiohjelmat</p>
 	  <p>
-        Ilmoita ongelmista{" "}
-        <a href="https://github.com/timelapse999/hello-wordl" target="_blank">t&auml;&auml;ll&auml;</a>.
+		L&auml;het&auml; palautetta, esim. sanoista t&auml;nne:{" "}
+		<a href="mailto:kieluri2022@gmail.com">kieluri2022@gmail.com</a>
+	  </p>
+	  <p>
+        L&auml;hdekoodi l&ouml;ytyy{" "}
+        <a href="https://github.com/timelapse999/hello-wordl" target="_blank">t&auml;&auml;lt&auml;</a>.
       </p>
 	  
 	  
