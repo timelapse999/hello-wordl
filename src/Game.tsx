@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Row, RowState } from "./Row";
 import dictionary from "./dictionaryCombined.json";
-import { Clue, clue, describeClue } from "./clue";
+import { Clue, clue, describeClue, getStringDefinitionLink } from "./clue";
 import { Keyboard } from "./Keyboard";
 import targetList from "./targetWords.json";
 import { 
@@ -47,7 +47,7 @@ function Game(props: GameProps) {
   const [guesses, setGuesses] = useState<string[]>([]);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [wordLength, setWordLength] = useState(3);
-  const [hint, setHint] = useState<string>(`Anna ensimmäinen arvauksesi!`);
+    const [hint, setHint] = useState<string | JSX.Element>(`Anna ensimmäinen arvauksesi!`);
   const [srStatus, setSrStatus] = useState<string>(``);
   const [target, setTarget] = useState(() => {
     resetRng();
@@ -81,6 +81,10 @@ function Game(props: GameProps) {
       setCurrentGuess((guess) =>
         (guess + key.toLowerCase()).slice(0, wordLength)
       );
+	  if ((currentGuess.length + 1) === wordLength && !dictionary.includes(currentGuess + key.toLowerCase())) {
+        setHint("En valitettavasti tunne sanaa. Voit poistaa kirjaimia askelpalauttimella (⌫)");
+        return;
+      }
       setHint("");
       setSrStatus("");
     } else if (key === "Backspace") {
@@ -101,12 +105,34 @@ function Game(props: GameProps) {
       setCurrentGuess((guess) => "");
       if (currentGuess === target) {
         setHint(
-          `Voitit! Sana oli ${target.toUpperCase()}. (Paina ENTER pelataksesi uudestaan)`
+		  <>
+                Voitit! Sana oli&nbsp;
+                  <a 
+                    className="target-word" 
+                    href={getStringDefinitionLink(target)} 
+                    target="_blank"
+                  >
+                    {target.toUpperCase()}
+                  </a>
+                . (Paina ENTER pelataksesi uudestaan)
+              </>
+		
         );
         setGameState(GameState.Won);
       } else if (guesses.length + 1 === props.maxGuesses) {
         setHint(
-          `Ei voittoa! Oikea vastaus oli ${target.toUpperCase()}. (Paina ENTER pelataksesi uudestaan)`
+		  <>
+                Ei voittoa! Oikea vastaus oli&nbsp;
+                  <a 
+                    className="target-word" 
+                    href={getStringDefinitionLink(target)} 
+                    target="_blank"
+                  >
+                    {target.toUpperCase()}
+                  </a>
+                . (Paina ENTER pelataksesi uudestaan)
+              </>
+		
         );
         setGameState(GameState.Lost);
       } else {

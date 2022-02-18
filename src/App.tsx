@@ -68,7 +68,7 @@ function About() {
         <b className="yellow-bg">L</b> keltataustaisena esiintyy <em>muualla</em> kohdesanassa.
       </p>
       <p>
-        Siirret&auml;&auml;n <b>L</b> seuraavassa arvauksessamme:
+        Siirret&auml;&auml;n <b className="yellow-bg">L</b> seuraavassa arvauksessamme:
       </p>
       <Row
         rowState={RowState.LockedIn}
@@ -100,11 +100,11 @@ function About() {
 	  </p>
 	  
 	  <ol className="leftAlign">
-	  <li>Kaikki kolmen kirjaimen perus- ja taivutusmuodot, esim. puu, i&auml;n, kun, lue (186 sanaa).</li>
+	  <li>Kaikki kolmen kirjaimen perus- ja taivutusmuodot, esim. puu, i&auml;n, kun, lue, ryi (186 sanaa).</li>
 
-      <li>Kaikki nelj&auml;n kirjaimen perus- ja taivutusmuodot, esim. talo, suun, siis, uida, nyki, olin, n&auml;&ouml;n, meni (1659 sanaa).</li>
+      <li>Kaikki nelj&auml;n kirjaimen perus- ja taivutusmuodot, esim. talo, suun, siis, uida, nyki, olin, n&auml;&ouml;n, meni (1664 sanaa).</li>
 
-      <li>Kaikki viiden kirjaimen perus- ja taivutusmuodot, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (8168 sanaa).</li>
+      <li>Kaikki viiden kirjaimen perus- ja taivutusmuodot, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (8225 sanaa).</li>
 	  </ol>
 	  
 	  <p>Valitse 3-, 4- tai 5-kirjaiminen versio yl&auml;palkista.</p>
@@ -118,7 +118,7 @@ function About() {
 	  <p>Kielurissa k&auml;ytetty koodi on muokattu avoimen l&auml;hdekoodin pohjalta.<br />Alkuper&auml;inen koodi l&ouml;ytyy t&auml;&auml;lt&auml;:<br />
 	  <a href="https://github.com/lynn/hello-wordl" target="_blank">https://github.com/lynn/hello-wordl</a></p>
 	  <p><strong>K&auml;ytetyt aineistot:</strong><br />
-	  <a href="https://kaino.kotus.fi/sanat/nykysuomi/" target="_blank">Kielitoimiston sanalista</a>, omat generointiohjelmat</p>
+	  <a href="https://kaino.kotus.fi/sanat/nykysuomi/" target="_blank">Kotimaisten kielten keskuksen nykysuomen sanalista</a>, omat generointiohjelmat</p>
 	  <p>
         Ilmoita ongelmista{" "}
         <a href="https://github.com/timelapse999/hello-wordl" target="_blank">t&auml;&auml;ll&auml;</a>.
@@ -199,35 +199,40 @@ function App() {
 	  */}
 	  
       {page === "about" && <About />}
-	        {page === "settings" && (
-        <div className="Settings">
-          <div className="Settings-setting">
-            <input
-              id="dark-setting"
-              type="checkbox"
-              checked={dark}
-              onChange={() => setDark((x: boolean) => !x)}
-            />
-            <label htmlFor="dark-setting">Tumma ulkoasu</label>
-          </div>
-          <div className="Settings-setting">
-            <input
-              id="colorblind-setting"
-              type="checkbox"
-              checked={colorBlind}
-              onChange={() => setColorBlind((x: boolean) => !x)}
-            />
-            <label htmlFor="colorblind-setting">Vaihtoehtoinen v&auml;riteema</label>
-          </div>
+	  
+		{page === "settings" && (
+			<div className="Settings">
+			  <div className="Settings-setting">
+				<input
+				  id="dark-setting"
+				  type="checkbox"
+				  checked={dark}
+				  onChange={() => setDark((x: boolean) => !x)}
+				/>
+				<label htmlFor="dark-setting">Tumma ulkoasu</label>
+			  </div>
+			  <div className="Settings-setting">
+				<input
+				  id="colorblind-setting"
+				  type="checkbox"
+				  checked={colorBlind}
+				  onChange={() => setColorBlind((x: boolean) => !x)}
+				/>
+				<label htmlFor="colorblind-setting">Vaihtoehtoinen v&auml;riteema</label>
+			  </div>
 
-        </div>
-      )}
+			</div>
+		  )}
+		  
       <Game 
 		maxGuesses={maxGuesses} 
 		hidden={page !== "game"}
         colorBlind={colorBlind} 
 	   />
+	   
+	   
     </div>
+	
   );
 }
 

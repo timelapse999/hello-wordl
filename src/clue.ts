@@ -55,3 +55,11 @@ export function describeClue(clue: CluedLetter[]): string {
     .map(({ letter, clue }) => letter.toUpperCase() + " " + clueWord(clue!))
     .join(", ");
 }
+
+export function getClueDefinitionLink(clues: CluedLetter[]): string {
+  return getStringDefinitionLink(clues.map(clue => clue.letter).join(''));
+}
+
+export function getStringDefinitionLink(word: string): string {
+  return `https://www.kielitoimistonsanakirja.fi/#/${word}?searchMode=all`;
+}
