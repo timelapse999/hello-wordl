@@ -162,7 +162,7 @@ function App() {
   
   
   const element_info: Info = <Info style={{width: 25, height: 25, marginRight: 5}} />
-  const element_close: Close = <Close style={{width: 25, height: 25, position: relative, top: 1px}} />
+  const element_close: Close = <Close style={{width: 25, height: 25, position: relative, top: 1}} />
   const element_settings: Settings = <Settings style={{width: 25, height: 25}} />
  
   
