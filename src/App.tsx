@@ -135,7 +135,21 @@ function About() {
 
 function App() {
   type Page = "game" | "about" | "settings";
-  const [page, setPage] = useState<Page>("game");
+  
+  let infoSeen = window.localStorage.getItem("info");
+
+  const [page, setPage] = useState<Page>("about");
+  
+  useEffect(() => {
+	if (infoSeen === null) {
+		setPage("about");
+		window.localStorage.setItem("info", JSON.stringify(true));
+	}
+	else if (infoSeen !== null) {
+		setPage("game");
+	}
+  }, [])
+  
   const prefersDark =
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -145,11 +159,10 @@ function App() {
     "keyboard",
     "qwertyuiop-asdfghjkl-BzxcvbnmE"
   );
-  const [enterLeft, setEnterLeft] = useSetting<boolean>("enter-left", false);
   
   
   const element_info: Info = <Info style={{width: 25, height: 25, marginRight: 5}} />
-  const element_close: Close = <Close style={{width: 25, height: 25}} />
+  const element_close: Close = <Close style={{width: 25, height: 25, position: relative, top: 1px}} />
   const element_settings: Settings = <Settings style={{width: 25, height: 25}} />
  
   
@@ -178,7 +191,9 @@ function App() {
       <h1>Kieluri</h1>
       <div style={{ position: "absolute", right: 5, top: 5 }}>
         {page !== "game" ? (
-          link(element_close, "Sulje", "game")
+		  <div className="closeButtonAnimation">
+			{link(element_close, "Sulje", "game")}
+		  </div>
         ) : (
           <>
             {link(element_info, "Tietoja", "about")}
@@ -186,7 +201,8 @@ function App() {
           </>
         )}
       </div>
-	  {/**
+	  
+	  {/** TODO: let the player choose a game type from the settings
      * <div style={{ position: "absolute", left: 5, top: 5, visibility: page === "game" ? "visible" : "hidden" }}>
      *   <a
      *     href="#"

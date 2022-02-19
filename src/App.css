@@ -274,3 +274,21 @@ a:active {
 .leftAlign {
 	text-align: left;
 }
+
+.closeButtonAnimation {
+  width: 30px;
+  height: 30px;
+  background-color: #33333380;
+  animation-name: example;
+  animation-duration: 4s;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes example {
+  0%   {background-color: #33333380;}
+  25%  {background-color: #55555580;}
+  50%  {background-color: #77777780;}
+  100% {background-color: #99999980;}
+}
