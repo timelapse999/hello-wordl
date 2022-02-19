@@ -100,11 +100,11 @@ function About() {
 	  </p>
 	  
 	  <ol className="leftAlign">
-	  <li>Kaikki kolmen kirjaimen perus- ja taivutusmuodot, esim. puu, i&auml;n, kun, lue, ryi (186 sanaa).</li>
+	  <li>Kaikki kolmen kirjaimen <i>perus- ja taivutusmuodot</i>, esim. puu, i&auml;n, kun, lue, ryi (186 sanaa).</li>
 
-      <li>Kaikki nelj&auml;n kirjaimen perus- ja taivutusmuodot, esim. talo, suun, siis, uida, nyki, olin, n&auml;&ouml;n, meni (1664 sanaa).</li>
+      <li>Kaikki nelj&auml;n kirjaimen <i>perus- ja taivutusmuodot</i>, esim. talo, suun, siis, uida, nyki, olin, n&auml;&ouml;n, meni (1667 sanaa).</li>
 
-      <li>Kaikki viiden kirjaimen perus- ja taivutusmuodot, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (8225 sanaa).</li>
+      <li>Kaikki viiden kirjaimen <i>perus- ja taivutusmuodot</i>, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (9898 sanaa).</li>
 	  </ol>
 	  
 	  <p>Valitse 3-, 4- tai 5-kirjaiminen versio yl&auml;palkista.</p>
