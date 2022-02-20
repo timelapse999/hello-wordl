@@ -101,11 +101,11 @@ function About() {
 	  </p>
 	  
 	  <ol className="leftAlign">
-	  <li>Kaikki kolmen kirjaimen <i>perus- ja taivutusmuodot</i>, esim. puu, i&auml;n, kun, lue, ryi (186 sanaa).</li>
+	  <li>Kaikki kolmen kirjaimen <i>perus- ja taivutusmuodot</i>, esim. puu, i&auml;n, kun, lue, ryi (188 sanaa).</li>
 
-      <li>Kaikki nelj&auml;n kirjaimen <i>perus- ja taivutusmuodot</i>, esim. talo, suun, siis, uida, nyki, olin, n&auml;&ouml;n, meni (1667 sanaa).</li>
+      <li>Kaikki nelj&auml;n kirjaimen <i>perus- ja taivutusmuodot</i>, esim. talo, suun, siis, uida, nyki, olin, n&auml;&ouml;n, meni (1671 sanaa).</li>
 
-      <li>Kaikki viiden kirjaimen <i>perus- ja taivutusmuodot</i>, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (9898 sanaa).</li>
+      <li>Kaikki viiden kirjaimen <i>perus- ja taivutusmuodot</i>, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (8241 sanaa).</li>
 	  </ol>
 	  
 	  <p>Sanoissa ei ole liitepartikkeleita kuten<br /> -han/-h&auml;n, -kaan/-k&auml;&auml;n, -kin, -pa/-p&auml;.</p>
