@@ -198,7 +198,7 @@ function Game(props: GameProps) {
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
       <div className="Game-options">
-        <label htmlFor="wordLength">Kirjaimia:</label>
+        <label htmlFor="wordLength">Sanan pituus:</label>
         <input
           type="range"
           min={minWordLength}

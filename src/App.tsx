@@ -48,7 +48,8 @@ function About() {
       <p>
         Sinulla on {maxGuesses} yrityst&auml; arvata sana.
         <br />
-        Jokaisen arvauksen j&auml;lkeen saat palautteen:
+		Voit valita arvattavan sanan pituuden vet&auml;m&auml;ll&auml; ruudukon yll&auml; olevasta liukus&auml;&auml;timest&auml;.<br />
+        Jokaisen arvauksen j&auml;lkeen saat palautteen niin kuin alla olevassa esimerkiss&auml;.
       </p>
       <Row
         rowState={RowState.LockedIn}
@@ -107,8 +108,6 @@ function About() {
       <li>Kaikki viiden kirjaimen <i>perus- ja taivutusmuodot</i>, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (9898 sanaa).</li>
 	  </ol>
 	  
-	  <p>Valitse 3-, 4- tai 5-kirjaiminen versio yl&auml;palkista.</p>
-	  
 	  <p>Sanoissa ei ole liitepartikkeleita kuten<br /> -han/-h&auml;n, -kaan/-k&auml;&auml;n, -kin, -pa/-p&auml;.</p>
       
 	  <p>
@@ -124,7 +123,7 @@ function About() {
 		<a href="mailto:kieluri2022@gmail.com">kieluri2022@gmail.com</a>
 	  </p>
 	  <p>
-        L&auml;hdekoodi l&ouml;ytyy{" "}
+        Kielurin l&auml;hdekoodi l&ouml;ytyy{" "}
         <a href="https://github.com/timelapse999/hello-wordl" target="_blank">t&auml;&auml;lt&auml;</a>.
       </p>
 	  
@@ -213,7 +212,7 @@ function App() {
      *           new Date().toISOString().replace(/-/g, "").slice(0, 8))
      *     }
      *   >
-     *     {seed ? "Arvo sana" : "Päivän sana"}
+     *     {seed ? "Arvo sana" : "P&auml;iv&auml;n sana"}
      *   </a>
      * </div>
 	  */}
