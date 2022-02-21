@@ -81,7 +81,7 @@ function Game(props: GameProps) {
       setCurrentGuess((guess) =>
         (guess + key.toLowerCase()).slice(0, wordLength)
       );
-	  if ((currentGuess.length + 1) === wordLength && !dictionary.includes(currentGuess + key.toLowerCase())) {
+	  if ((currentGuess.length + 1) >= wordLength && !dictionary.includes(currentGuess + key.toLowerCase())) {
         setHint("En valitettavasti tunne sanaa. Voit poistaa kirjaimia askelpalauttimella (⌫)");
         return;
       }
