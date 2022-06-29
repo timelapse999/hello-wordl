@@ -105,7 +105,7 @@ function About() {
 
       <li>Kaikki nelj&auml;n kirjaimen <i>perus- ja taivutusmuodot</i>, esim. talo, suun, siis, uida, nyki, olin, n&auml;&ouml;n, meni (1671 sanaa).</li>
 
-      <li>Kaikki viiden kirjaimen <i>perus- ja taivutusmuodot</i>, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (8241 sanaa).</li>
+      <li>Kaikki viiden kirjaimen <i>perus- ja taivutusmuodot</i>, esim. torvi, ty&ouml;ni, yhden, ilke&auml;, tulla, sanoi, saane, t&auml;ti&auml;, t&auml;it&auml;, miten (8242 sanaa).</li>
 	  </ol>
 	  
 	  <p>Sanoissa ei ole liitepartikkeleita kuten<br /> -han/-h&auml;n, -kaan/-k&auml;&auml;n, -kin, -pa/-p&auml;.</p>
