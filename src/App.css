@@ -292,3 +292,22 @@ a:active {
   50%  {background-color: #77777780;}
   100% {background-color: #99999980;}
 }
+
+.option-button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+	color: #000;
+}
+
+.option-button:hover {
+    background-color: #e0e0e0;
+}
+
+.option-button.selected {
+    background-color: #d0d0d0;
+}

@@ -1,6 +1,7 @@
 import "./App.css";
 import { seed } from "./util";
 import Game from "./Game";
+import Questionnaire from "./Questionnaire";
 import { useEffect, useState } from "react";
 import { Row, RowState } from "./Row";
 import { Clue } from "./clue";
@@ -133,19 +134,28 @@ function About() {
 }
 
 function App() {
-  type Page = "game" | "about" | "settings";
+  type Page = "game" | "about" | "settings" | "questionnaire";
   
   let infoSeen = window.localStorage.getItem("info");
+
+  let questionnaireAnswered = window.localStorage.getItem("questionnaire");
 
   const [page, setPage] = useState<Page>("about");
   
   useEffect(() => {
+	
 	if (infoSeen === null) {
 		setPage("about");
 		window.localStorage.setItem("info", JSON.stringify(true));
 	}
 	else if (infoSeen !== null) {
-		setPage("game");
+		if (questionnaireAnswered === null) {
+			setPage("questionnaire");
+			window.localStorage.setItem("questionnaire", JSON.stringify(true));
+		}
+		else if (questionnaireAnswered !== null) {
+			setPage("game");
+		}
 	}
   }, [])
   
@@ -159,12 +169,10 @@ function App() {
     "qwertyuiop-asdfghjkl-BzxcvbnmE"
   );
   
-  
   const element_info: Info = <Info style={{width: 25, height: 25, marginRight: 5}} />
   const element_close: Close = <Close style={{width: 25, height: 25, position: 'relative', top: 1}} />
   const element_settings: Settings = <Settings style={{width: 25, height: 25}} />
  
-  
   useEffect(() => {
     document.body.className = dark ? "dark" : "";
     setTimeout(() => {
@@ -184,6 +192,10 @@ function App() {
       {icon}
     </a>
   );
+
+  const handlePageChange = (newPage: Page) => {
+		setPage(newPage);
+  };
 
   return (
     <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
@@ -219,6 +231,8 @@ function App() {
 	  
       {page === "about" && <About />}
 	  
+	  {page === "questionnaire" && <Questionnaire onPageChange={handlePageChange} />}
+
 		{page === "settings" && (
 			<div className="Settings">
 			  <div className="Settings-setting">
